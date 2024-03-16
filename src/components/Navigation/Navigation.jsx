@@ -5,7 +5,7 @@ export default function Navigation() {
   return (
     <nav className={css.nav}>
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/details">Details</NavLink>
+      <NavLink to="/movies">Movies</NavLink>
     </nav>
   );
 }

@@ -17,3 +17,8 @@ export const getTrendingMovieList = async () => {
     const response = await instance.get("trending/movie/day");
     return response.data.results  
 }
+
+export const getDetailsFromId = async (movieId) => {
+    const response = await instance.get(`/movie/${movieId}`);
+    return response.data  
+}

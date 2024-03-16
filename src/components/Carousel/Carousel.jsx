@@ -13,7 +13,7 @@ export default function Carousel({ movies }) {
   };
 
   return (
-    <div style={{width:"500px"}}>
+    <div style={{minWidth: "300px", maxWidth:"500px"}}>
         <Slider {...settings}>
       {movies.map((movie) => {
         return <CarouselItem key={movie.id} movie={movie}/>;
