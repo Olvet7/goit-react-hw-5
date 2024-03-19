@@ -1,0 +1,12 @@
+.link {
+    color: blue;
+}
+
+.isActive {
+    color: orange;
+}
+
+.link:hover {
+    background-color: orange;
+    color: blue;
+}

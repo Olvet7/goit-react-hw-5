@@ -1,0 +1,28 @@
+h2, p {
+    margin: 0 0;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.img {
+    padding-top: 16px;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.info {
+  padding-top: 16px 16px 0 16px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 30px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.infoBlock {
+    max-width: 500px;
+}
