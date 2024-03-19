@@ -1,0 +1,24 @@
+h2, p {
+    margin: 0 0;
+}
+
+.author {
+    color: rgb(139, 63, 63);
+    margin: 0 0;
+    padding-right: 8px;
+    padding-right: 30px;
+    max-width: 180px;
+}
+
+.item {
+    display: flex;
+    margin-top: 16px;
+    padding: 16px 16px 16px 16px;
+    background-color: rgb(178, 221, 149);
+}
+
+.text {
+    color: rgb(60, 57, 57);
+    /* height: 80px;
+    overflow-y: scroll; */
+}

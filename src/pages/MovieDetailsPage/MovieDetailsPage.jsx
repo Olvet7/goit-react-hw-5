@@ -4,7 +4,7 @@
   import MovieDetails from "../../components/MovieDetails/MovieDetails";
   import { NavLink } from "react-router-dom";
   import clsx from "clsx";
-  import css from "./MovieDetailsPage"
+  import css from "./MovieDetailsPage.module.css"
 
   const makeActiveClass = ({isActive}) => {
     return clsx(css.link, isActive && css.isActive)
@@ -33,7 +33,7 @@
     }, [movieId]);
 
     return (
-      <div>
+      <div className={css.container}>
         {error && <p>Ops!</p>}
         {loading && <p>Loading...</p>}
         {movie && <MovieDetails movie={movie} />}

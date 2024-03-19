@@ -10,3 +10,8 @@
     background-color: orange;
     color: blue;
 }
+
+.container {
+    max-width: 1028px;
+    margin: 0 auto;
+}
