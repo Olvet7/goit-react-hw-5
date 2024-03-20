@@ -15,7 +15,6 @@ export default function HomePage() {
             try{
                 setLoading(true)
                 const trendingMovies = await getTrendingMovieList()
-                console.log(trendingMovies);
                 setMovies(trendingMovies)
             }
             catch(error){
