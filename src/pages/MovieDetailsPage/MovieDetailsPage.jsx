@@ -6,6 +6,8 @@ import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 import MovieDetails from "../../components/MovieDetails/MovieDetails";
 import clsx from "clsx";
 import css from "./MovieDetailsPage.module.css";
+import Loader from "../../components/Loader/Loader";
+import NotFoundPage from "../NotFoundPage/NotFoundPage";
 
 const makeActiveClass = ({ isActive }) => {
   return clsx(css.link, isActive && css.isActive);
@@ -43,9 +45,10 @@ export default function MovieDetailsPage() {
         <FaRegArrowAltCircleLeft />
         Go Back
       </Link> */}
-      {error && <p>Ops!</p>}
-      {loading && <p>Loading...</p>}
+      {error && <NotFoundPage />}
+      {loading && <Loader />}
       {movie && <MovieDetails movie={movie} />}
+
       <div>
         <h3>Additional information:</h3>
         <ul>
@@ -61,6 +64,7 @@ export default function MovieDetailsPage() {
           </li>
         </ul>
       </div>
+      
       <Suspense fallback={<p>LOADING...</p>}>
         <Outlet />
       </Suspense>

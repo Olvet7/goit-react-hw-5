@@ -1,5 +1,6 @@
 import { Formik, Form, Field } from "formik";
 import { useSearchParams } from "react-router-dom";
+import css from "./SearchBar.module.css";
 
 export default function SearchBar() {
   const [params, setParams] = useSearchParams();
@@ -17,9 +18,9 @@ export default function SearchBar() {
         actions.resetForm();
       }}
     >
-      <Form>
+      <Form className={css.form}>
         <Field name="queryParam"></Field>
-        <button type="submit">Find</button>
+        <button type="submit" className={css.btn}>Find</button>
       </Form>
     </Formik>
   );

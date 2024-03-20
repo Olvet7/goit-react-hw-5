@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import { getTrendingMovieList } from "../../kinoteka-api"
 import MovieList from "../../components/MovieList/MovieList";
 import Carousel from "../../components/Carousel/Carousel";
+import css from "./HomePage.module.css";
+import Loader from "../../components/Loader/Loader";
 
 export default function HomePage() {
     const [movies, setMovies] = useState([]);
@@ -27,9 +29,9 @@ export default function HomePage() {
     }, [])
 
     return (
-        <div>
+        <div className={css.container}>
             {movies.length > 0 && <Carousel movies={movies}/>}
-            {loading && <p>Loading...</p>}
+            {loading && <Loader/>}
             {error && <p>Oops, please reload this page</p>}
             {movies.length > 0 && <MovieList movies={movies}/>}
         </div>
