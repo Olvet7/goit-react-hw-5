@@ -32,3 +32,8 @@ export const getReviewsFromMovie = async (movieId) => {
     const response = await instance.get(`/movie/${movieId}/reviews`)
     return response.data.results;
 }
+
+export const getSearchedMovie = async (queryParam) => {
+    const response = await instance.get(`/search/movie?query=${queryParam}`)
+    return response.data.results;
+}

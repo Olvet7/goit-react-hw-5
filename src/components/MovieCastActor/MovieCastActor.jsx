@@ -5,7 +5,7 @@ export default function MovieCastActor ({actor}) {
     const defaultPhoto = "https://www.shutterstock.com/shutterstock/photos/270387437/display_1500/stock-photo-anonymous-portrait-silhouette-of-man-unidentifiable-270387437.jpg";
   return (
     <div>
-        <h3>{actor.name}</h3>
+        <h4>{actor.name}</h4>
         {actor.profile_path ? (<img src={`${baseUrl}${actor.profile_path}`} alt={`${actor.name} photo`} className={css.img}/>) : <img src={`${defaultPhoto}`} />}
     </div>
   )

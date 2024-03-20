@@ -1,15 +1,10 @@
-import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 import css from "./MovieDetails.module.css";
 
 export default function MovieDetails({ movie }) {
   const baseUrl = "https://image.tmdb.org/t/p/w500";
-  console.log({ movie });
   return (
     <div className={css.container}>
-      <button>
-        <FaRegArrowAltCircleLeft />
-        Go Back
-      </button>
+  
       <div className={css.info}>
         <div>
           <img
