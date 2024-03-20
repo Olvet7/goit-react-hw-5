@@ -16,7 +16,6 @@ export default function MovieCast() {
         setError(false);
         const cast = await getCastFromMovie(movieId);
         setCastList(cast);
-        console.log(castList.length);
       } catch (error) {
         setError(true);
       } finally {
