@@ -19,7 +19,6 @@ export default function MovieCast() {
       } catch (error) {
         setError(true);
       } finally {
-        setError(false);
         setLoading(false);
       }
     }

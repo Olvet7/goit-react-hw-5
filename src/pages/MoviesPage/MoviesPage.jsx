@@ -1,5 +1,5 @@
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import { useSearchParams } from "react-router-dom";
 import {getSearchedMovie} from '../../kinoteka-api';
@@ -33,18 +33,12 @@ export default function MoviesPage () {
     getFilteredMovies();
   }, [queryParam]);
 
-  const memoisedMovie = useMemo(() => {
-    return filteredMovies.filter((movie) => {
-      return movie.title.toLowerCase().includes(queryParam.toLowerCase())
-    })
-  }, [filteredMovies, queryParam])
-
   return (
     <div className={css.container}>
       {loading && <Loader />}
       {error && <p>Oops, please reload this page</p>}
       <SearchBar />
-      {filteredMovies.length > 0 && <MovieList movies={memoisedMovie}/>}
+      {filteredMovies.length > 0 && <MovieList movies={filteredMovies}/>}
     </div>
   )
 }

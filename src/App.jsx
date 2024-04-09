@@ -18,8 +18,8 @@ export default function App() {
   return (
     <>
       <Navigation />
-    <Suspense>
-    <Routes fallback="<p>LOADING PAGE...</p>">
+    <Suspense fallback="<p>LOADING PAGE...</p>">
+    <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
           <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
